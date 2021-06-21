@@ -116,4 +116,7 @@ export default {
     border-radius: 10px;
     padding: 20px 0;
   }
+  .w50 {
+    width: 50%;
+  }
 </style>

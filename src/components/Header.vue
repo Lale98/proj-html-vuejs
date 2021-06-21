@@ -32,15 +32,16 @@
                         </button>
                     </div>
                     <div class="callback">
-                        <img :src="require(`../assets/images/${userInfo[userActive].img}`)" alt="profilo">
-                        <h3>{{userInfo[userActive].name}}</h3>
-                        <h4>{{userInfo[userActive].info}}</h4>
+                        <img :src="require(`../assets/images/${userInfo[callbackUserActive].img}`)" alt="profilo">
+                        <h3>{{userInfo[callbackUserActive].name}}</h3>
+                        <h4>{{userInfo[callbackUserActive].info}}</h4>
                         <div class="phone">
                             <i class="fas fa-phone-alt orange"></i>
                             <p class="orange">{{phone}}</p>
                         </div>
                         <form>
                             <input type="text" placeholder="Your Name*">
+                            <img id="id" src="../assets/images/image.png" alt="image">
                             <input type="email" placeholder="Your Email*">
                             <input type="number" placeholder="Your Phone Number*">
                         </form>
@@ -64,7 +65,7 @@ export default {
     },
     data : function () {
         return {
-            userActive : 0,
+            callbackUserActive : 0,
         }
     }
 }
@@ -114,6 +115,7 @@ export default {
         }
 
         input {
+            position: relative;
             border: 1px solid rgba(133, 135, 134, 0.3);
             border-radius: 10px;
             width: 100%;
@@ -125,6 +127,15 @@ export default {
             font-size: 12px;
             color: rgb(133, 135, 134);
         }
+    }
+    form {
+        position: relative;
+    }
+    #id {
+        width: 18px;
+        position: absolute;
+        top: 9%;
+        right: 4%;
     }
     .j-left {
         width: 50%;
