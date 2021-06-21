@@ -1,28 +1,77 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header :navBarData="navBarData"/>
+    <Main />
+    <Footer />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue';
+import Main from './components/Main.vue';
+import Footer from './components/Footer.vue';
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Header,
+    Main,
+    Footer,
+  },
+  data : function () {
+    return {
+      navBarData : [
+        {
+          name : "Home",
+          list : true,
+        },
+        {
+          name : "Services",
+          list : true,
+        },
+        {
+          name : "Why Us",
+          list : false,
+        },
+        {
+          name : "Case Studies",
+          list : false,
+        },
+        {
+          name : "About",
+          list : false,
+        },
+        {
+          name : "Blog",
+          list : false,
+        },
+      ],
+
+    }
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import './assets/variables';
+  @import './assets/generals';
+  @import '~@fontsource/roboto/400.css';
+  @import '~@fontsource/roboto/500.css';
+  @import '~@fontsource/roboto/700.css';
+
+  * {
+    font-family: "Roboto";
+  }
+  .orange {
+    color: $colorOrange;
+  }
+  .backLightOrange {
+    background-color: rgba($colorOrange, 0.2);
+  }
+  .btn {
+    border-radius: 10px;
+    padding: 15px 35px;
+    font-size: 18px;
+  }
 </style>
