@@ -20,7 +20,7 @@
                     <button class="btn btnOrange">Get a Consultation</button>
                 </div>
                 <div class="image">
-                    <img src="" alt="img"> 
+                    <img src="" alt="im"> 
                 </div>
             </div>
             <div class="ms_container interest">
