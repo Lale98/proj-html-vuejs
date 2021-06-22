@@ -119,6 +119,7 @@ export default {
   .ms_container {
     margin: 0 auto;
     max-width: 1300px;
+    height: 100%;
   }
   .space-bet {
     display: flex;
@@ -127,6 +128,10 @@ export default {
   .align-center {
     display: flex;
     align-items: center;
+  }
+  .center {
+    display: flex;
+    justify-content: center;
   }
   .space-evenly {
     display: flex;

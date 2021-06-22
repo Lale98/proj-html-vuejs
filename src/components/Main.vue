@@ -92,21 +92,27 @@
                 </div>
                 <div class="list">
                     <div class="item">
-                        <div class="square"></div>
+                        <div class="square align-center center">
+                            <i class="fas fa-address-card orange"></i>
+                        </div>
                         <div class="txt-info">
                             <h3>Accountability</h3>
                             <p>Curabitur ac leo nunc vestibulum</p>
                         </div>
                     </div>
                     <div class="item">
-                        <div class="square"></div>
+                        <div class="square align-center center">
+                            <i class="fas fa-rss-square orange"></i>
+                        </div>
                         <div class="txt-info">
                             <h3>Transparency</h3>
                             <p>Curabitur ac leo nunc vestibulum</p>
                         </div>
                     </div>
                     <div class="item">
-                        <div class="square"></div>
+                        <div class="square align-center center">
+                            <i class="fas fa-share-alt-square orange"></i>
+                        </div>
                         <div class="txt-info">
                             <h3>Investment</h3>
                             <p>Curabitur ac leo nunc vestibulum</p>
@@ -131,7 +137,7 @@
                 </div>
             </div>
             <div id="resouces">
-                
+
             </div>
         </section>
     </div>
@@ -228,6 +234,10 @@ export default {
         height: 75px;
         width: 75px;
         margin-right: 30px;
+
+        i {
+            font-size: 30px;
+        }
     }
     .txt-info {
         h3 {
