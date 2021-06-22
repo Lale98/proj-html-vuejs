@@ -146,22 +146,47 @@ export default {
   }
   .orange {
     color: $colorOrange;
+    .btn &:hover {
+      color: white;
+      transition: 0.5s;
+    }
   }
   .btnLightOrange {
     background-color: rgba($colorOrange, 0.2);
+    &:hover {
+      color: white;
+      background-color: $colorOrange;
+      transition: 0.5s;
+      cursor: pointer;
+    }
   }
   .btnOrange {
     color: white;
     background-color: $colorOrange;
+    &:hover {
+      background-color: #EB621F;
+      transition: 0.5s;
+    }
   }
   .btnWhite {
     background-color: white;
     color: black;
+    &:hover {
+      background-color: transparent;
+      border: 1px solid white;
+      color: white;
+      transition: 0.5s;
+      cursor: pointer;
+    }
   }
   .btn {
     border-radius: 10px;
     padding: 15px 35px;
     font-size: 18px;
+    &:hover {
+      color: white;
+      cursor: pointer;
+    }
   }
   .btn-lg {
     width: 100%;
@@ -169,6 +194,7 @@ export default {
     font-size: 18px;
     border-radius: 10px;
     padding: 20px 0;
+    cursor: pointer;
   }
   .w50 {
     width: 50%;
@@ -190,5 +216,21 @@ export default {
   }
   .green {
     background-color: #38C3A0;
+  }
+  .relative {
+    position: relative;
+  }
+  .back {
+    height: 450px;
+    width: 100%;
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba($colorOrange,0.7));
+    opacity: 0;
+    top: 0;
+    left: 0;
+    &:hover {
+      opacity: 1;
+      transition: 0.5s;
+    }
   }
 </style>

@@ -61,9 +61,9 @@
                 <h3>Drive Leads and Sales with Avada</h3>
             </div>
             <button class="btn btnLightOrange">
-                <div class="phone">
-                    <i class="fas fa-phone-alt orange"></i>
-                    <p class="orange">{{phone}}</p>
+                <div class="phone orange">
+                    <i class="fas fa-phone-alt"></i>
+                    <p>{{phone}}</p>
                 </div>
             </button>
         </div>
@@ -128,18 +128,18 @@
                     <p>{{award.info}}</p>
                 </div>
             </section>
-            <div class="testimonial ms_container space-evenly">
-                <img src="../assets/images/large-testimonial.jpg" alt="testimonial">
-                <div class="txt w30">
-                    <h3>“The team at Avada Marketing Consultant is fabulous. They helped us unlock our potential online and offline. We have experienced year on year growth due to their progressive approach.”</h3>
-                    <h4>Kate Schadler</h4>
-                    <h6>Marketing Consultant - Abstract</h6>
-                </div>
-            </div>
-            <div id="resouces">
-
-            </div>
         </section>
+        <div class="testimonial ms_container space-evenly">
+            <img src="../assets/images/large-testimonial.jpg" alt="testimonial">
+            <div class="txt w30">
+                <h3>“The team at Avada Marketing Consultant is fabulous. They helped us unlock our potential online and offline. We have experienced year on year growth due to their progressive approach.”</h3>
+                <h4>Kate Schadler</h4>
+                <h6>Marketing Consultant - Abstract</h6>
+            </div>
+        </div>
+        <div id="resouces">
+
+        </div>
     </div>
 </template>
 
@@ -188,6 +188,7 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/variables';
     .testimonial {
+        margin: 150px auto;
         .w30 {
             margin-top: 50px;
             width: 30%;
@@ -199,7 +200,6 @@ export default {
         }
     }
     #awards {
-        margin-bottom: 200px;
         img {
             width: 60%;
         }
@@ -210,6 +210,8 @@ export default {
     }
     .awards-title {
         margin: 60px 0;
+        font-size: 30px;
+        font-weight: 450;
     }
     .red {
         filter: saturate(400%);

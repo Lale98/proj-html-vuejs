@@ -5,6 +5,7 @@
             <h3>{{person.txt}}</h3>
             <h2>{{person.num}}</h2>
             <p>{{person.info}}</p>
+            <div class="back"></div>
         </div>
     </div>
 </template>
@@ -21,7 +22,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/variables';
+    
     .card {
+        position: relative;
         width: calc((100% - 100px) / 3);
 
         h3 {
