@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header :navBarData="navBarData" :phone="phone" :userInfo="userInfo"/>
-    <Main />
+    <Main :brands="brands" :phone="phone" :awards="awards"/>
     <Footer />
   </div>
 </template>
@@ -54,6 +54,52 @@ export default {
           info : "Marketing Consultant Expert",
           img : "marketing-consultant-expert.jpg"
         },
+      ],
+      brands : [
+        {
+          img : 'abstract.png'
+        },
+        {
+          img : 'cglobal.png'
+        },
+        {
+          img : 'next.png'
+        },
+        {
+          img : 'hemisferio.png'
+        },
+        {
+          img : 'spaces.png'
+        },
+        {
+          img : 'digitalbox.png'
+        },
+
+      ],
+      awards : [
+        {
+          img : 'a.png',
+          title : 'Winner Seo Master MAGT',
+          info : 'Smart Start Award 2017',
+          color : 'light-blue'
+        },
+        {
+          img : 'b.png',
+          title : 'Top Social Media Agencies',
+          info : 'Next Partner 2018'
+        },
+        {
+          img : 'c.png',
+          title : '10 Fastest Growing Abstract',
+          info : 'Solution Providers 2019',
+          color : 'red'
+        },
+        {
+          img : 'd.png',
+          title : 'National Excellence Agencie',
+          info : 'Award Winner 2020',
+          color : 'blu'
+        },
       ]
     }
   }
@@ -73,7 +119,6 @@ export default {
   .ms_container {
     margin: 0 auto;
     max-width: 1300px;
-    height: 100%;
   }
   .space-bet {
     display: flex;
@@ -82,6 +127,10 @@ export default {
   .align-center {
     display: flex;
     align-items: center;
+  }
+  .space-evenly {
+    display: flex;
+    justify-content: space-evenly;
   }
   .phone {
     display: flex;
@@ -118,5 +167,23 @@ export default {
   }
   .w50 {
     width: 50%;
+  }
+  .txt-center {
+    text-align: center;
+  }
+  .ball {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  .blue {
+    background-color: #223BCB;
+  }
+  .yellow {
+    background-color: #EFD43F;
+  }
+  .green {
+    background-color: #38C3A0;
   }
 </style>
