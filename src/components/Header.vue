@@ -122,7 +122,7 @@ export default {
     .on-sale {
         position: fixed;
         top: 223px;
-        right: 0;
+        right: 15px;
 
         .cont {
             height: 100%;
@@ -147,7 +147,7 @@ export default {
     .demos {
         position: fixed;
         top: 150px;
-        right: 0;
+        right: 15px;
         i {
             font-size: 25px;
             margin-bottom: 8px;

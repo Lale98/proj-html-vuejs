@@ -95,7 +95,7 @@ export default {
     .chat {
         position: fixed;
         bottom: 10px;
-        right: 2px;
+        right: 15px;
         background-color: $colorOrange;
         border-radius: 50%;
         height: 60px;
