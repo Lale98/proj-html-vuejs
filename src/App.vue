@@ -253,10 +253,13 @@ export default {
       transition: 0.5s;
     }
   }
+  .bold {
+    font-weight: 500;
+  }
   .callback {
         background-color: white;
         width: 37%;
-        height: 620px;
+        height: 630px;
         margin-right: 7%;
         border-radius: 15px;
         box-shadow: 0 15px 40px rgba(black, 0.2);

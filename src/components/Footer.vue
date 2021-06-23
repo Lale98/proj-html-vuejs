@@ -16,7 +16,7 @@
                     <h4>{{userInfo[callbackUserActive].info}}</h4>
                     <div class="phone">
                         <i class="fas fa-phone-alt orange"></i>
-                        <div class="orange">{{phone}}</div>
+                        <div class="orange bold">{{phone}}</div>
                     </div>
                     <form>
                         <input type="text" placeholder="Your Name*">

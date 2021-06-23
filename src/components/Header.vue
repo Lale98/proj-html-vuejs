@@ -15,7 +15,7 @@
                 <div class="nav_right">
                     <div class="phone">
                         <i class="fas fa-phone-alt orange"></i>
-                        <p>{{phone}}</p>
+                        <p class="bold">{{phone}}</p>
                     </div>
                     <button class="btn orange btnLightOrange">Free Quote</button>
                 </div>
@@ -38,7 +38,7 @@
                         <h4>{{userInfo[callbackUserActive].info}}</h4>
                         <div class="phone">
                             <i class="fas fa-phone-alt orange"></i>
-                            <div class="orange">{{phone}}</div>
+                            <div class="orange bold">{{phone}}</div>
                         </div>
                         <form>
                             <input type="text" placeholder="Your Name*">
@@ -98,6 +98,7 @@ export default {
         background-image: url("../assets/images/marketing-intro.jpg");
         background-size: cover;
         background-position-x: -110px;
+        margin-top: 10vh;
 
         .veil {
             height: 100%;
@@ -113,6 +114,7 @@ export default {
         border-radius: 7px;
         background-color: white;
         box-shadow: 0 0 5px rgba(black, 0.5);
+        cursor: pointer;
 
         
         p {
@@ -207,7 +209,12 @@ export default {
         }
     }
     #nav_bar {
+        position: fixed;
         height: 10vh;
+        top: 0;
+        width: 100%;
+        background-color: white;
+        z-index: 1;
 
         .nav_left {
             display: flex;
