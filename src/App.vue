@@ -2,7 +2,7 @@
   <div id="app">
     <Header :navBarData="navBarData" :phone="phone" :userInfo="userInfo"/>
     <Main :brands="brands" :phone="phone" :awards="awards"/>
-    <Footer />
+    <Footer :userInfo="userInfo" :callUs="callUs" :phone="phone"/>
   </div>
 </template>
 
@@ -25,26 +25,32 @@ export default {
         {
           name : "Home",
           list : true,
+          num : 0
         },
         {
           name : "Services",
           list : true,
+          num : 1
         },
         {
           name : "Why Us",
           list : false,
+          num : 2
         },
         {
           name : "Case Studies",
           list : false,
+          num : 3
         },
         {
           name : "About",
           list : false,
+          num : 4
         },
         {
           name : "Blog",
           list : false,
+          num : 5
         },
       ],
       phone : "(555) 802-1234",
@@ -100,6 +106,20 @@ export default {
           info : 'Award Winner 2020',
           color : 'blu'
         },
+      ],
+      callUs : [
+        {
+          name : "Services",
+          links : ["Marketing Plan", "Sales Development", "Digital Marketing", "Pricing", "Why Us", "Case Studies"]
+        },
+        {
+          name : "Resources",
+          links : ["Learnig Center", "Video Tutorials", "Customers", "Blog"]
+        },
+        {
+          name : "Company",
+          links : ["Who We Are", "Contact Us", "Careers"]
+        },
       ]
     }
   }
@@ -107,6 +127,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
   @import './assets/variables';
   @import './assets/generals';
   @import '~@fontsource/roboto/400.css';
@@ -221,10 +242,9 @@ export default {
     position: relative;
   }
   .back {
-    height: 450px;
     width: 100%;
     position: absolute;
-    background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba($colorOrange,0.7));
+    background-image: linear-gradient(to bottom, rgba($colorOrange,0), rgba($colorOrange,0.7));
     opacity: 0;
     top: 0;
     left: 0;
@@ -233,4 +253,46 @@ export default {
       transition: 0.5s;
     }
   }
+  .callback {
+        background-color: white;
+        width: 37%;
+        height: 620px;
+        margin-right: 7%;
+        border-radius: 15px;
+        box-shadow: 0 15px 40px rgba(black, 0.2);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 20px 30px;
+
+        img {
+            border-radius: 50%;
+            width: 80px;
+        }
+
+        h3 {
+            font-size: 25px;
+            font-weight: 420;
+        }
+        h4 {
+            font-size: 20px;
+            font-weight: 400;
+            color: rgb(133, 135, 134);
+        }
+
+        input {
+            position: relative;
+            border: 1px solid rgba(133, 135, 134, 0.3);
+            border-radius: 10px;
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 12px;
+            color: rgb(133, 135, 134);
+        }
+    }
 </style>

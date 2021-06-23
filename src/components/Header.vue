@@ -5,9 +5,10 @@
                 <div class="nav_left">
                     <img id="logo" src="../assets/images/avada-marketing-logo.png" alt="logo">
                     <ul>
-                        <li v-for="data, index in navBarData" :key="index">
-                            <a href="">{{data.name}}</a>
+                        <li @click="change(index)" v-for="data, index in navBarData" :key="index" :class="{active : activeClass == index}" class="menu">
+                            <a :class="{active : activeClass == index}">{{data.name}}</a>
                             <i v-if="data.list == true" class="fas fa-chevron-down"></i>
+                            <div class="line" :class="{hidden : activeClass != index}"></div>
                         </li>
                     </ul>
                 </div>
@@ -37,7 +38,7 @@
                         <h4>{{userInfo[callbackUserActive].info}}</h4>
                         <div class="phone">
                             <i class="fas fa-phone-alt orange"></i>
-                            <p class="orange">{{phone}}</p>
+                            <div class="orange">{{phone}}</div>
                         </div>
                         <form>
                             <input type="text" placeholder="Your Name*">
@@ -48,6 +49,17 @@
                         <button class="btn-lg btnOrange">Get a Callback</button>
                         <p>By submitting my data I agree to be contacted</p>
                     </div>
+                </div>
+            </div>
+            <div class="demos square center align-center ">
+                <i class="fas fa-folder-open"></i>
+                <p>Demos</p>
+            </div>
+            <div class="on-sale square">
+                <div class="cont center align-center">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h6>39</h6>
+                    <p>On Sale</p>
                 </div>
             </div>
         </div>
@@ -66,6 +78,12 @@ export default {
     data : function () {
         return {
             callbackUserActive : 0,
+            activeClass : 0
+        }
+    },
+    methods : {
+        change : function (index) {
+            this.activeClass = this.navBarData[index].num;
         }
     }
 }
@@ -73,6 +91,8 @@ export default {
 
 <style lang="scss" scoped>
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
+@import '../assets/variables';
+
     #jumbotron {
         height: 72vh;
         background-image: url("../assets/images/marketing-intro.jpg");
@@ -86,47 +106,76 @@ export default {
         }
         
     }
-    .callback {
-        background-color: white;
-        width: 37%;
-        height: 620px;
-        margin-right: 7%;
-        border-radius: 15px;
-        box-shadow: 0 15px 40px rgba(black, 0.2);
-        display: flex;
-        align-items: center;
+    .square {
         flex-direction: column;
-        justify-content: space-around;
-        padding: 20px 30px;
+        height: 65px;
+        width: 65px;
+        border-radius: 7px;
+        background-color: white;
+        box-shadow: 0 0 5px rgba(black, 0.5);
 
-        img {
-            border-radius: 50%;
-            width: 80px;
-        }
-
-        h3 {
-            font-size: 25px;
-            font-weight: 420;
-        }
-        h4 {
-            font-size: 20px;
-            font-weight: 400;
-            color: rgb(133, 135, 134);
-        }
-
-        input {
-            position: relative;
-            border: 1px solid rgba(133, 135, 134, 0.3);
-            border-radius: 10px;
-            width: 100%;
-            padding: 15px 20px;
-            font-size: 18px;
-            margin-bottom: 15px;
-        }
+        
         p {
             font-size: 12px;
-            color: rgb(133, 135, 134);
         }
+    }
+    .on-sale {
+        position: fixed;
+        top: 223px;
+        right: 0;
+
+        .cont {
+            height: 100%;
+            width: 100%;
+            position: relative;
+            flex-direction: column;
+
+            h6 {
+                font-size: 26px;
+                color: #69BE7E;
+                margin-left: 15px;
+            }
+
+            i {
+                color: #69BE7E;
+                position: absolute;
+                top: 20%;
+                left: 18%;
+            }
+        }
+    }
+    .demos {
+        position: fixed;
+        top: 150px;
+        right: 0;
+        i {
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+    }
+    .line {
+        position: absolute;
+        border: 1px solid $colorOrange;
+        width: 80px;
+        top: 85%;
+        left: 25%;
+    }
+    .hidden {
+        display: none;
+    }
+    .menu {
+        position: relative;
+
+        i {
+            font-size: 12px;
+        }
+        a {
+            cursor: pointer;
+        }
+        
+    }
+    .active {
+        color: $colorOrange;
     }
     form {
         position: relative;
@@ -163,6 +212,8 @@ export default {
         .nav_left {
             display: flex;
             justify-content: flex-start;
+
+            
         }
 
         .nav_right {

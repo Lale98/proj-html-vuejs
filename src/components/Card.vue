@@ -23,7 +23,9 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/variables';
-    
+    .back {
+        height: 450px;
+    }
     .card {
         position: relative;
         width: calc((100% - 100px) / 3);

@@ -81,7 +81,10 @@
                     <p>Quisque aliquet, libero consequat elementum convallis, erat risus imperdiet pellentesque sem neque eget.</p>
                     <button class="btn btnOrange">Why Work With Us</button>
                 </div>
-                <img src="../assets/images/we-boost-our-clients.jpg" alt="boost">
+                <div class="work-item">
+                    <img src="../assets/images/we-boost-our-clients.jpg" alt="boost">
+                    <div class="back"></div>
+                </div>
             </div>
             <div class="ms_container space-bet">
                 <div class="txt-1">
@@ -130,15 +133,44 @@
             </section>
         </section>
         <div class="testimonial ms_container space-evenly">
-            <img src="../assets/images/large-testimonial.jpg" alt="testimonial">
+            <div class="testimonial-item">
+                <img src="../assets/images/large-testimonial.jpg" alt="testimonial">
+                <div class="back"></div>
+            </div>
             <div class="txt w30">
                 <h3>“The team at Avada Marketing Consultant is fabulous. They helped us unlock our potential online and offline. We have experienced year on year growth due to their progressive approach.”</h3>
                 <h4>Kate Schadler</h4>
                 <h6>Marketing Consultant - Abstract</h6>
             </div>
         </div>
-        <div id="resouces">
-
+        <div id="resources">
+            <div class="ms_container space-bet align-center marketing">
+                <h2 class="w50">Marketing Resources: Insider Advice on How to Increase Online Sales</h2>
+                <button class="btn btnOrange">Explore All Resources</button>
+            </div>
+            <div class="marketing-img space-bet ms_container">
+                <div class="marketing-item">
+                    <div class="studies">
+                        <img src="../assets/images/blog-posts-6.jpg" alt="post">   
+                        <div class="back"></div> 
+                    </div>
+                    <h3>Marketing Tips And Tricks For Your Website</h3>
+                </div>
+                <div class="marketing-item">
+                    <div class="studies">
+                        <img src="../assets/images/blog-posts-5.jpg" alt="post"> 
+                        <div class="back"></div>   
+                    </div>
+                    <h3>How to Write Stunning Blog Post Titles</h3>
+                </div>
+                <div class="marketing-item">
+                    <div class="studies">
+                        <img src="../assets/images/blog-posts-4.jpg" alt="post"> 
+                        <div class="back"></div>   
+                    </div>
+                    <h3>Techniques to Reduce Facebook Ads Spend</h3>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -194,9 +226,51 @@ export default {
             width: 30%;
         }
         img {
-            width: 47%;
+            width: 100%;
             border-radius: 15px;
             margin-right: 50px;
+        }
+        .testimonial-item {
+            width: 47%;
+            position: relative;
+        }
+        .back {
+            height: 594px;
+        }
+    }
+    .studies {
+        position: relative;
+    }
+    .back {
+        height: 270px;
+        border-radius: 15px;
+    }
+    .marketing-img {
+        margin-top: 100px;
+    }
+    .marketing-item {
+        width: calc((100% - 80px) / 3);
+
+        img {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-weight: 450;
+            font-size: 30px;
+        }
+    }
+    #resources {
+        background-color: rgba(#E3E4E2,0.3);
+        padding: 100px 0;
+
+        h2 {
+            margin: 0;
+        }
+
+        button {
+            margin-top: 110px;
         }
     }
     #awards {
@@ -301,9 +375,17 @@ export default {
         background-color: rgba(#E3E4E2,0.3);
     }
     #work .work-us img {
-        width: 50%;
+        width: 100%;
         border-radius: 15px;
         margin-bottom: 150px;
+    }
+    .work-item {
+        width: 50%;
+        position: relative;
+        border-radius: 15px;
+        .back {
+            height: 595px;
+        }
     }
     #persons {
         margin-bottom: 100px;
